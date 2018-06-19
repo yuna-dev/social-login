@@ -63,80 +63,11 @@ public class LoginController {
 	@RequestMapping(value = "/oauth2callback", method = { RequestMethod.GET, RequestMethod.POST })
 	public String googlecallback(Model model, @RequestParam String code) throws IOException {
 		System.out.println("googleCallback");
-	/*
-		OAuth2Operations oauthOperations = googleConnectionFactory.getOAuthOperations(); 
-		AccessGrant accessGrant = oauthOperations.exchangeForAccess(code, googleOAuth2Parameters.getRedirectUri(), null); 
-		String accessToken = accessGrant.getAccessToken(); 
-		Long expireTime = accessGrant.getExpireTime(); 
-		if (expireTime != null && expireTime < System.currentTimeMillis()) 
-			{ accessToken = accessGrant.getRefreshToken(); 
-		logger.info("accessToken is expired. refresh token = {}" , accessToken); } 
-		
-		Connection<Google>connection = googleConnectionFactory.createConnection(accessGrant); 
-		Google google = connection == null ? new GoogleTemplate(accessToken) : connection.getApi(); 
-		PlusOperations plusOperations = google.plusOperations(); 
-		Person person = plusOperations.getGoogleProfile();
-
-		System.out.println(person.getAccountEmail());
-
-*/
-		
-		return "success";
-	}
-	/*
-	@RequestMapping("/oauth2callback")
-	public String doSessionAssignActionPage(HttpServletRequest request){
-		
-		System.out.println("googleSignInCallback");
-		String code = request.getParameter("code");
-		
-		OAuth2Operations oauthOperations = googleConnectionFactory.getOAuthOperations();
-		AccessGrant accessGrant = oauthOperations.exchangeForAccess(code , googleOAuth2Parameters.getRedirectUri(),
-				null);
-		
-		String accessToken = accessGrant.getAccessToken();
-		Long expireTime = accessGrant.getExpireTime();
-		if (expireTime != null && expireTime < System.currentTimeMillis()) {
-			accessToken = accessGrant.getRefreshToken();
-			System.out.printf("accessToken is expired. refresh token = {}", accessToken);
-		}
-		Connection<Google> connection = googleConnectionFactory.createConnection(accessGrant);
-		Google google = connection == null ? new GoogleTemplate(accessToken) : connection.getApi();
-		
-		PlusOperations plusOperations = google.plusOperations();
-		Person person = plusOperations.getGoogleProfile();
-		
-		MemberVO member = new MemberVO();
-		member.setNickName(person.getDisplayName());
-		member.setAuth("USR");
-
-		HttpSession session = request.getSession();
-		session.setAttribute("_MEMBER_", member );
-		
-		System.out.println(person.getDisplayName());
-		
-		return "success";
-		System.out.println(person.getAccountEmail());
-		System.out.println(person.getAboutMe());
-		System.out.println(person.getDisplayName());
-		System.out.println(person.getEtag());
-		System.out.println(person.getFamilyName());
-		System.out.println(person.getGender());
-		
-		
-	}
-*/
 	
-	@RequestMapping(value = "/oauth", produces = "application/json", method = { RequestMethod.GET, RequestMethod.POST })
-	public String kakao(@RequestParam("code") String code, HttpServletRequest request, HttpServletResponse httpServlet) {
-
-
-		System.out.println("code: "+ code);
-
-
+		
 		return "success";
 	}
-
+	
 
 }
 
