@@ -35,11 +35,9 @@
 	</div> 
 
 
-
-    
-	<div id="kakao-login-btn" style="text-align:center"></a>
-	<a href="http://developers.kakao.com/logout"></a>
-	</div>
+	<a id="kakao-login-btn" style="text-align:center"></a>
+	<a href="http://developers.kakao.com/logout">로그아웃</a>
+	
 	<script type='text/javascript'>
 	  //<![CDATA[
 	    // 사용할 앱의 JavaScript 키를 설정해 주세요.
@@ -55,6 +53,7 @@
 	      }
 	    });
 	  //]]>
+	  
 	</script>
 </body>
 
